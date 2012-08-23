@@ -1,5 +1,5 @@
 <h3>Home</h3>
 <% @likeables.each do |like| %>
-  <p><%=link_to like.name, like %> <%= ratings_for like %></p>
+  <p><%=link_to like.name, like %> <%= ratings_for like, :show_user_rating => true %></p>
 <% end %>
 <p><%= link_to "Add a new like!", new_likeable_path %></p>
