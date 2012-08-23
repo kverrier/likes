@@ -1,4 +1,5 @@
 <h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+<% @likeables.each do |like| %>
+  <p><%=link_to like.name, like %> <%= ratings_for like %></p>
 <% end %>
+<p><%= link_to "Add a new like!", new_likeable_path %></p>

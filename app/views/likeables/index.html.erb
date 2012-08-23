@@ -1,0 +1,12 @@
+<h3>Likeables</h3>
+<ul class="likeables">
+  <% @likeables.each do |likeable| %>
+    <li>
+      <%= link_to likeable.name, likeable %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Create Likeable', new_likeable_path %>
+    
+

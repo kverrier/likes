@@ -5,4 +5,10 @@ Likes::Application.routes.draw do
   root :to => "home#index"
   devise_for :users
   resources :users, :only => [:show, :index]
+  resources :likeables do
+    member do
+      post :rate
+    end
+  end
+
 end
