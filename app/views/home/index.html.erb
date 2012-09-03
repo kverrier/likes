@@ -1,5 +1,11 @@
-<h3>Home</h3>
-<% @likeables.each do |like| %>
-  <p><%=link_to like.name, like %> <%= ratings_for like, :show_user_rating => true %></p>
-<% end %>
-<p><%= link_to "Add a new like!", new_likeable_path %></p>
+<em>How would you rate...</em>
+
+<div id="likeable" class="offset2 span8 pagination-centered">
+  <h2><%= @random_like.name %></h2>
+
+  <%#= image_tag @like_image %>
+
+  <%= ratings_for @random_like, :show_user_rating => true %>
+
+  <%= button_to "next", root_path, :class => "span4 btn" %>
+</div>
