@@ -25,3 +25,5 @@ gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
 gem 'simple_form'
 gem 'ajaxful_rating', :git => 'git://github.com/edgarjs/ajaxful-rating.git', :branch => "rails3"
 gem 'wikipedia-client'
+gem 'badfruit'
+gem 'auto_migrations'

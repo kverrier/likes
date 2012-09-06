@@ -1,0 +1,17 @@
+<h2> Search Results for : <%= @query %> </h2>
+<div class="span12">
+  <%= form_tag(new_likeable_path) do %>
+    <% @movies.each do |movie| %>
+      <%= link_to image_tag(movie.posters.profile), likeables_path(:likeable => {:name => movie.name, :rt_id => movie.id}), :method => :post %>
+    <% end -%>
+  <% end -%>
+</div>
+
+<div class="span4 offset4">
+  <% if @page == 1 -%>
+    <%= link_to button_tag("NEXT", :class => "btn"), "/search/results/?utf8=✓&search=#{@query}&page=#{@page + 1}" %>
+  <% else -%>
+    <%= link_to button_tag("PREVIOUS", :class => "btn"), "/search/results/?utf8=✓&search=#{@query}&page=#{@page - 1}" %>
+    <%= link_to button_tag("NEXT", :class => "btn"), "/search/results/?utf8=✓&search=#{@query}&page=#{@page + 1}" %>
+  <% end -%>
+</div>

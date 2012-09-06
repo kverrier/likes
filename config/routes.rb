@@ -11,4 +11,6 @@ Likes::Application.routes.draw do
     end
   end
 
+  match 'search/results' => 'search#results'
+
 end

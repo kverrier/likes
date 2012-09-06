@@ -1,4 +1,5 @@
-<h3>Like</h3>
-<p>Name: <%= @like.name %></p>
+<h2><%= @like.name %></h2>
+<%= image_tag @like_image %>
 <%= ratings_for @like, :show_user_rating => true %>
+
 

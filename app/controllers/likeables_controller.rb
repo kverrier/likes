@@ -16,12 +16,17 @@ class LikeablesController < ApplicationController
 
   def show
     @like = Likeable.find(params[:id])
+
+    api_key = 'qse7essku53utvzgudug6u8y'
+    bf = BadFruit.new(api_key)
+    movie = bf.movies.search_by_id(@like.rt_id)
+    @like_image = movie.posters.profile
   end
 
    def edit
     @likeable = Likeable.find(params[:id])
   end
-  
+
   def update
     @likeable = Likeable.find(params[:id])
     if @likeable.update_attributes(params[:likeable])
