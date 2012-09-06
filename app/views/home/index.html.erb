@@ -3,15 +3,16 @@
 <strong><%= @movie_title %></strong>
 
 <div class="row">
-  <div id="likeable" class="offset2 span8 pagination-centered">
+  <% if @random_like != nil -%>
+    <div id="likeable" class="offset2 span8 pagination-centered">
 
-    <%= image_tag @movie_image %>
+      <%= image_tag @movie_image %>
 
-    <%= ratings_for @random_like, :show_user_rating => true %>
+      <%= ratings_for @random_like, :show_user_rating => true %>
 
-    <%= button_to "next", root_path, :class => "span4 btn" %>
+      <%= button_to "next", root_path, :class => "span4 btn" %>
+    </div>
+  <% end -%>
 
-    <%= render "layouts/searchbar" %>
-
-  </div>
+  <%= render "layouts/searchbar" %>
 </div>
