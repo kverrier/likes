@@ -1,19 +1,10 @@
-Likes
+Hutch
 ========================
 
-This application was generated with the rails_apps_composer gem:
-https://github.com/RailsApps/rails_apps_composer
-provided by the RailsApps Project:
-http://railsapps.github.com/
+Super early development stages of a site with interactive questions for media consumption preferences.
 
-________________________
+Big plans but at this point experiment project.
 
-Recipes:
-["auth", "controllers", "core", "email", "extras", "frontend", "gems", "git", "init", "models", "railsapps", "readme", "routes", "setup", "testing", "views"]
 
-Preferences:
-{:git=>true, :railsapps=>"rails3-bootstrap-devise-cancan", :database=>"sqlite", :templates=>"erb", :unit_test=>"rspec", :integration=>"cucumber", :fixtures=>"factory_girl", :frontend=>"bootstrap", :bootstrap=>"sass", :email=>"gmail", :authentication=>"devise", :devise_modules=>"default", :authorization=>"cancan", :starter_app=>"admin_app", :form_builder=>"none", :dev_webserver=>"webrick", :prod_webserver=>"thin", :ban_spiders=>true, :rvmrc=>true}
-
-________________________
-
+-------
 License
